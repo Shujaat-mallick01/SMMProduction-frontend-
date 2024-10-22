@@ -1,0 +1,12 @@
+@import '../globals/variables.scss';
+
+// Links
+a {
+    font-weight: $font-weight-bold;
+    color: $link-color;
+    text-decoration: inherit;
+
+    &:hover {
+        color: $link-hover-color;
+    }
+}

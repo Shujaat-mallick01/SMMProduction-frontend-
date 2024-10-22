@@ -1,0 +1,28 @@
+@import '../globals/variables.scss';
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-primary;
+    line-height: $line-height-heading;
+}
+
+
+// h1 specific styles with mixin
+h1 {
+    @include heading-style(36px, 43px, 400, $color-primary);
+}
+
+// h2 specific styles with mixin
+h2 {
+    @include heading-style(28px, 34px, 500, $color-dark);
+}
+
+// Additional headings if needed
+h3 {
+    @include heading-style(24px, 30px, 500, $color-primary);
+}

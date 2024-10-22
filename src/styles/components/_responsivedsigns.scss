@@ -1,0 +1,24 @@
+@media (max-width:767px) {
+    .user-reesponsive {
+        flex-direction: column-reverse;
+        gap: 20px !important;
+    }
+
+    .display-block-mob {
+        display: block;
+    }
+
+    .width-mob-tb{
+        min-width: 250px;
+    }
+}
+
+@media (max-width:1192px) and (min-width:768px) {
+    .col-gap {
+        column-gap: 5px;
+    }
+
+    .display-1024-block{
+        display: block;
+    }
+}

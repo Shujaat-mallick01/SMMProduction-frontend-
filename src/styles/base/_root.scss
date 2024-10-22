@@ -1,0 +1,10 @@
+@import '../globals/variables.scss';
+@import '../globals/mixins.scss';
+
+:root {
+    font-family: $font-primary;
+    line-height: $line-height-base;
+    font-weight: $font-weight-normal;
+
+    @include font-smoothing();
+}

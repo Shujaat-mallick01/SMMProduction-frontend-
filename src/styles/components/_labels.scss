@@ -1,0 +1,21 @@
+@import '../globals/variables';
+
+.label-base {
+    font-family: $font-primary;
+    font-weight: $font-weight-light;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.label-white {
+    @extend .label-base;
+    color: #FFFFFF;
+}
+
+.label-dark {
+    @extend .label-base;
+    color: #1B1B1B;
+}

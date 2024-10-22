@@ -1,0 +1,62 @@
+.user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .profile-pic {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid #F1812B
+    }
+
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 40px 0px 10px;
+
+        .user-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #000; 
+        }
+
+        .user-role {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+    }
+
+    .user-icons {
+        display: flex;
+        gap: 10px;
+        margin-left: auto; // Push icons to the far right
+
+        .icon {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #000; // Icon color
+
+            &:hover {
+                color: $color-accent; // Hover color
+            }
+        }
+    }
+}
+
+.profile-image {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid $color-accent;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+}

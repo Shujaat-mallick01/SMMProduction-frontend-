@@ -1,0 +1,35 @@
+@import '../globals/variables.scss';
+@import '../globals/mixins.scss';
+
+
+// Core Button styles
+button,
+.button {
+    @include button-style(#fff, #000, #000); // Default styles (optional)
+}
+
+// Apply styles for each button variant
+@each $variant, $styles in $button-variants {
+    .button-#{$variant} {
+        @if map-has-key($styles, bg) {
+            background-color: map-get($styles, bg);
+        }
+
+        @if map-has-key($styles, text) {
+            color: map-get($styles, text);
+        }
+
+        @if map-has-key($styles, border) {
+            border-color: map-get($styles, border);
+        }
+
+        // Only include hover/focus styles if different from the default
+        @if map-has-key($styles, hover-bg) or map-has-key($styles, hover-border) {
+            @include button-hover(map-get($styles, hover-bg, $default-hover-bg), map-get($styles, hover-border, $default-hover-border));
+        }
+
+        // @if map-has-key($styles, border) {
+        //     @include button-focus(map-get($styles, border));
+        // }
+    }
+}

@@ -1,0 +1,114 @@
+// Font settings
+$font-primary: 'Publica Sans Round', system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-size-base: 1em;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$line-height-base: 1.5;
+$line-height-heading: 1.1;
+
+// Color palette
+$color-primary: #1034A6;
+$color-accent: #FFDD00; 
+$color-dark: #1B1B1B;
+$color-white: #fff;
+
+// Define breakpoints in variables.scss or wherever you're managing global variables
+
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
+
+
+// Link styles
+$link-color: $color-primary;
+$link-hover-color: lighten($color-primary, 10%);
+
+$default-hover-bg: lighten($color-primary, 10%);
+$default-hover-border: darken($color-primary, 10%);
+
+// Button Variants (Map)
+$button-variants: (
+  primary: (
+    bg: $color-primary,
+    text: #fff,
+    border: $color-primary,
+    hover-bg: darken($color-primary, 5%),
+    hover-border: lighten($color-primary, 10%)
+  ),
+  
+  primary-light: (
+    bg: #fff,
+    text: $color-primary,
+    border: $color-primary,
+    hover-bg: darken($color-primary, 5%),
+    hover-border: lighten($color-primary, 10%)
+  ),
+  
+  secondary: (
+    bg: $color-accent,
+    text: $color-dark,
+    border: $color-accent,
+    hover-bg: darken($color-accent, 5%),
+    hover-border: lighten($color-accent, 10%)
+  ),
+  secondary-light: (
+    bg: #fff,
+    text: $color-dark,
+    border: $color-accent,
+    border-width:1px solid
+    // hover-bg: darken($color-accent, 5%),
+    // hover-border: lighten($color-accent, 10%)
+  ),
+
+  success: (
+    bg: #28a745,
+    text: #fff,
+    border: #28a745,
+    hover-bg: darken(#28a745, 5%),
+    hover-border: lighten(#28a745, 10%)
+  ),
+  warning: (
+    bg: #ff9800,
+    text: #fff,
+    border: #ff9800,
+    hover-bg: darken(#ff9800, 5%),
+    hover-border: lighten(#ff9800, 10%)
+  ),
+  dark: (
+    bg: #1b1b1b,
+    text: #fff,
+    border: #1b1b1b,
+    hover-bg: darken(#1b1b1b, 5%),
+    hover-border: lighten(#1b1b1b, 10%)
+  ),
+  danger: (
+    bg: #F51E09,
+    text: #fff,
+    border:#F51E09,
+    hover-bg: darken(#F51E09, 5%),
+    hover-border: lighten(#F51E09, 10%)
+  ),
+  danger-light: (
+    bg: #fff,
+    text: #F51E09,
+    border:#F51E09,
+  ),
+  accent-2: (
+    bg: #73C2FB,
+    text: #1b1b1b,
+    border:#73C2FB,
+    hover-bg: darken(#73C2FB, 5%),
+    hover-border: lighten(#73C2FB, 10%)
+  ),
+  accent-2-light: (
+    bg: #fff,
+    text: #1b1b1b,
+    border:#73C2FB,
+    hover-bg: darken(#73C2FB, 5%),
+    hover-border: lighten(#73C2FB, 10%)
+  )
+);

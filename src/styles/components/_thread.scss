@@ -1,0 +1,53 @@
+img.chat-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 2px 8.8px 0px #00000029;
+}
+
+.chat-window {
+    flex-grow: 1;
+    overflow-y: auto;
+    border-radius: 15px;
+}
+
+.chat-sender-information {
+    font-size: 14px;
+    gap: 5px;
+    margin-left: 60px;
+}
+
+.chat-sender-info {
+    color: #5D5D5D;
+    font-size: 12px;
+}
+
+.chat-message-text {
+    background: #FFFFFF;
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: 0px 2px 8.8px 0px #00000029;
+    border-radius: 19px 19px 19px 0px;
+    opacity: 0px;
+}   
+.chat-input-container{
+    border: 1px solid #1B1B1B80;
+    border-radius: 18px;
+    padding: 10px 30px;
+}
+
+.chat-avatar-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Adjust for positioning */
+    right: -10px;  /* Adjust for positioning */
+    width: 40px;   /* Adjust the size accordingly */
+    height: 40px;  /* Adjust the size accordingly */
+    border-radius: 0 0 20px 0; /* Rounded corner on the bottom right */
+    background: #fff; /* Set the color to white */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional for shadow effect */
+    z-index: -1;
+}

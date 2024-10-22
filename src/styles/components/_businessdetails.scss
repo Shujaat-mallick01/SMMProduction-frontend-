@@ -1,0 +1,59 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-check {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+select#countryCode {
+  position: absolute;
+  top: 0;
+  left: 2%;
+  width: 15%;
+  background-color: transparent;
+  padding: 15px 0px;
+  border: 0px 1px 0px 0px;
+}
+
+input#businessNumber {
+  padding-left: 114px;
+}
+
+button.add-social {
+  width: 100%;
+  margin-top: 15px;
+  background-color: #73C2FB;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.soci {
+  position: absolute;
+  margin-left: 15px;
+  border: 0.5px solid #1b1b1b;
+  border-width: 0 1px 0 0;
+  padding-right: 15px;
+}
+
+input.soci-in {
+  padding-left: 80px !important;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.frm-txt {
+  font-size: 14px;
+  font-weight: 300;
+}

@@ -1,0 +1,39 @@
+.nav-links {
+    a {
+        padding: 5px 20px;
+        border-radius: 18px;
+        font-weight: 400;
+
+        &:hover {
+            color: #fff;
+        }
+
+        &.active {
+            color: $color-dark;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .user-profile {
+        display: none !important;
+    }
+
+    nav.global-navbar {
+        display: none !important;
+    }
+
+    nav.global-navbar {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .sidebar .user-profile {
+        display: none;
+    }
+
+    .sidebar nav.global-navbar {
+        display: none;
+    }
+}

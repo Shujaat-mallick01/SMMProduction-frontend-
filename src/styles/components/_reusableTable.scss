@@ -1,0 +1,72 @@
+table {
+    width: 100%;
+}
+
+th {
+    border: 1px solid;
+    background: #{$color-primary}; 
+    color: #ffff;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 6px 0px;
+    font-weight: 400;
+}
+
+td {
+    font-size: 12px;
+    padding: 30px 20px;
+    border-bottom: 0.5px solid $color-dark;
+    position: relative;
+    text-align: center;
+}
+
+.table-btns-desig {
+    border: 1px solid;
+    padding: 6px 12px;
+    border-radius: 18px;
+}
+
+a.table-btns-desig.no-in.button-danger-light:hover {
+    color: #F51E09;
+    border-color: #F51E09;
+}
+
+.team-assigned {
+    border: none;
+}
+
+.assig-tem {
+    border-color: $color-primary; 
+}
+
+span.assigned-label {
+    position: absolute;
+    text-align: center;
+    border: 0.5px solid #FFDD00;
+    padding: 6px 12px;
+    border-radius: 15px;
+    left: 13%;
+    top: 70%;
+    width: 37%;
+}
+
+.team-row {
+    border-bottom: 0.5px solid #1B1B1B;
+}
+
+.max-height{
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.section > div {
+    scrollbar-width: thin;
+    scrollbar-color: $color-primary transparent;
+}
+
+.pst-typ{
+    width: 70%;
+}
+.pst-sts{
+    width: 30%;
+}

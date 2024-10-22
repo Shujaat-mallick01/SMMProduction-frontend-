@@ -1,0 +1,42 @@
+// Main SCSS file
+@import './globals/fonts';
+@import './globals/variables';
+@import './globals/mixins';
+@import './base/root';
+@import './base/typography';
+@import './base/links';
+@import './components/grid';
+@import './components/buttons';
+@import './components/labels';
+@import './components/input';
+@import './components/userProfile';
+@import './components/passwords';
+@import './components/reusableTable';
+@import './components/header';
+@import './components/businessdetails';
+@import './components/plans';
+@import './components/calendar';
+@import './components/modal';
+@import './base/utility';
+@import './components/responsivedsigns';
+@import './components/sidebar';
+@import './components/createplan';
+@import './components/thread';
+@import './components//proposals';
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.text-danger {
+    color: #ff2800;
+}
+
+main {
+    padding: 0px 15px;
+}
+
