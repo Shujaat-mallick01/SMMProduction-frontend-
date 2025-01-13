@@ -1,10 +1,7 @@
 import { useState } from "react";
 import ClientForm from "../../components/Form/ClientForm";
-// import { useCreateClientMutation } from "../../services/api/clientApiSlice";
-// import { convertToSnakeCase } from '../../utils/generalUtils'
 
 const NewClient = () => {
-  // const [createClient] = useCreateClientMutation();
   const [successMessage, setSuccessMessage] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
 
@@ -25,26 +22,26 @@ const NewClient = () => {
     brandGuidelinesNotes: '',
     ugcDriveLink: '',
     additionalNotes: '',
-  }
+  };
 
-  // const handleSubmit = async (values) => {
-  //   const formattedValues = convertToSnakeCase(values);
-  //   try {
-  //     await createClient(formattedValues).unwrap(); // Unwrap the response to handle any errors
-  //     setSuccessMessage('Client created successfully!');
-  //     setErrorMessage(null);
-  //   } catch (error) {
-  //     const message = error?.data?.message || 'Failed to create client. Please try again.';
-  //     setErrorMessage(message);
-  //     setSuccessMessage(null);
-  //   }
-  // };
+  const handleFormSubmit = async (values) => {
+    try {
+      // Simulate API call
+      console.log('Form submitted with values:', values);
+      setSuccessMessage('Client successfully created!');
+      setErrorMessage(null); // Clear error message
+    } catch {
+      setErrorMessage('Failed to create client. Please try again.');
+      setSuccessMessage(null); // Clear success message
+    }
+  };
 
   return (
     <div className="section">
       {successMessage && <div className="success-message">{successMessage}</div>}
       {errorMessage && <div className="error-message">{errorMessage}</div>}
-      <ClientForm initialValues={initialValues} />    </div>
+      <ClientForm initialValues={initialValues} onSubmit={handleFormSubmit} />
+    </div>
   );
 };
 

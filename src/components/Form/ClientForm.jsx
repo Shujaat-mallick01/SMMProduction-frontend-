@@ -1,9 +1,8 @@
-import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 import FieldAndError from './FieldAndError';
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedin, FaYoutube, FaChevronDown } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedin, FaYoutube } from 'react-icons/fa';
 
 const ClientForm = ({ initialValues, onSubmit }) => {
     const socialMedia = ['facebook', 'instagram', 'twitter', 'linkedin', 'youtube']
@@ -39,7 +38,11 @@ const ClientForm = ({ initialValues, onSubmit }) => {
 
         // Web Development Details Validation
         websiteType: Yup.string().required('Website type is required'),
-        noOfProducts: Yup.number().required('Number of products is required'),
+        noOfProducts: Yup.number().when('websiteType', {
+            is: 'products', // Trigger validation only when 'products' is selected
+            then: Yup.number().required('Number of products is required').min(1, 'Must be at least 1'),
+            otherwise: Yup.number().notRequired(),
+        }),
         membership: Yup.string().required('Membership selection is required'),
         additionalNotes: Yup.string(),
         websiteStructure: Yup.string().required('Website structure is required'),
@@ -154,7 +157,15 @@ const ClientForm = ({ initialValues, onSubmit }) => {
                                             </label>
                                         </div>
                                     )} />
-                                    <FieldAndError name="noOfProducts" label="No. of Products" type="number" placeholder="No. of Products" customClass="border-input" />
+                                    {(values.websiteType === 'products') && (
+                                        <FieldAndError
+                                            name="noOfProducts"
+                                            label="No. of Products"
+                                            type="number"
+                                            placeholder="Enter the number of products"
+                                            customClass="border-input"
+                                        />
+                                    )}
                                     <FieldAndError name="membership" label="Do you offer any Membership?" customClass="border-input" renderField={() => (
                                         <div className="d-flex gap-20">
                                             <label className="d-flex chk-scochi">

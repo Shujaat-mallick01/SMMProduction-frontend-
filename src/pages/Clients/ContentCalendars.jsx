@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import DynamicTable from '../../components/shared/DynamicTable'; // Import the DynamicTable component
 import { FaPlusSquare } from 'react-icons/fa';
 import Modal from '../../components/shared/ReUsableModal'; // Import the Modal component
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const ContentCalendars = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);

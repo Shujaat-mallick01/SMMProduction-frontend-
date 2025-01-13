@@ -1,4 +1,3 @@
-import React from 'react';
 import avatar from '../../assets/Images/profileAwatar.jfif';
 import FieldAndError from '../../components/Form/FieldAndError'; // Adjust the import path accordingly
 import { Formik, Form } from 'formik';

@@ -62,7 +62,7 @@
         }
     }
     @else if $media == 'sm' {
-        @media (min-width: 576px) {
+        @media (max-width:767px) {
             @content;
         }
     }
